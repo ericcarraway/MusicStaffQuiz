@@ -67,9 +67,10 @@ var setNextQuestion = function () {
 };
 
 var askQuestion = function () {
+    var IMAGE_BASE_URL = 'images/';
     var holder = '';
     holder += '<img alt="question" src="';
-    holder += userStats.currentQuestion.imgName;
+    holder += IMAGE_BASE_URL + userStats.currentQuestion.imgName;
     holder += '" class="img-rounded" />';
     document.getElementById('question-img').innerHTML = holder;
 };
@@ -149,6 +150,6 @@ var alertTimeData = function () {
     // present data
     alert('You answered ' + userStats.correctAnswers + ' questions correctly in ' + userStats.quizCompletionTime + ' seconds. \n' +
         'You averaged ' + userStats.answersPerMinute + ' correct answers per minute \n' +
-        'with ' + userStats.percentage + 'percent accuracy.'
+        'with ' + userStats.percentage + ' percent accuracy.'
         );
 };
